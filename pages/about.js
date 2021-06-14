@@ -23,7 +23,7 @@ export default class About extends Component {
     */
 
     static async getInitialProps() {
-        const res = await fetch("https://api.github.com/users/inod1")
+        const res = await fetch("https://api.github.com/users/inodw1")
         const statusCode = res.status > 200 ? res.status : false
         const data = await res.json()
         return { user: data, statusCode }
