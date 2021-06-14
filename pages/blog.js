@@ -1,9 +1,9 @@
 import Layout from "../components/Layout"
 import Link from "next/link"
 
-const PostLink = ({ title }) => (
+const PostLink = ({ title, slug }) => (
     <li>
-        <Link href={`/post?title=${title}`}>
+        <Link as={`/${slug}`} href={`/post?title=${title}`}>
             <a>{title}</a>
         </Link>
     </li>
@@ -12,10 +12,10 @@ const PostLink = ({ title }) => (
 export default () => (
     <Layout title="My Blog">
         <ul>
-            <PostLink title="React"/>
-            <PostLink title="Angular"/>
-            <PostLink title="Vue"/>
-            <PostLink title="Next"/>
+            <PostLink slug="react-post" title="React Post"/>
+            <PostLink slug="angular-post" title="Angular Post"/>
+            <PostLink slug="vue-post" title="Vue Post"/>
+            <PostLink slug="next-post" title="Next Post"/>
         </ul>
     </Layout>
 )
