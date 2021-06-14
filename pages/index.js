@@ -3,9 +3,9 @@ import Layout from "../components/Layout"
 
 const Index = () => (
     <Layout title="Home">
-        <Link href="/about">
+        {/* <Link href="/about">
             <a>Go to about</a>
-        </Link>
+        </Link> */}
         <p>Welcome to the home page</p>
     </Layout>
 )
